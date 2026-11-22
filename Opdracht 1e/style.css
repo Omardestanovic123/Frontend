@@ -1,0 +1,132 @@
+/* ===== GRID SYSTEEM ===== */
+
+/* Container */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+    border: 3px solid magenta;
+}
+
+/* Row */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 4px;
+}
+
+/* Kolommen: flex-grow 0, flex-basis (100 / 12) * aantalKolommen */
+.col-1 {
+    flex-grow: 0;
+    flex-basis: 8.33%;
+}
+
+.col-2 {
+    flex-grow: 0;
+    flex-basis: 16.66%;
+}
+
+.col-3 {
+    flex-grow: 0;
+    flex-basis: 25%;
+}
+
+.col-4 {
+    flex-grow: 0;
+    flex-basis: 33.33%;
+}
+
+.col-5 {
+    flex-grow: 0;
+    flex-basis: 41.66%;
+}
+
+.col-6 {
+    flex-grow: 0;
+    flex-basis: 50%;
+}
+
+.col-7 {
+    flex-grow: 0;
+    flex-basis: 58.33%;
+}
+
+.col-8 {
+    flex-grow: 0;
+    flex-basis: 66.66%;
+}
+
+.col-9 {
+    flex-grow: 0;
+    flex-basis: 75%;
+}
+
+.col-10 {
+    flex-grow: 0;
+    flex-basis: 83.33%;
+}
+
+.col-11 {
+    flex-grow: 0;
+    flex-basis: 91.66%;
+}
+
+.col-12 {
+    flex-grow: 0;
+    flex-basis: 100%;
+}
+
+/* Styling kolommen */
+[class*="col-"] {
+    background-color: #fff;
+    border: 1px solid #333;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+/* ===== MEDIA QUERIES ===== */
+
+/* Extra 1: Grote schermen - oranje rand */
+@media (min-width: 1200px) {
+    .container {
+        border: 5px solid orange;
+    }
+}
+
+/* Extra 2: Tablet - blauwe rand, 2 kolommen per rij */
+@media (max-width: 992px) {
+    .container {
+        border: 5px solid blue;
+    }
+
+    .row [class*="col-"] {
+        flex-basis: 50%;
+    }
+}
+
+/* Extra 3: Kleine tablet - groene rand, 3 kolommen per rij */
+@media (max-width: 768px) {
+    .container {
+        border: 5px solid green;
+    }
+
+    .row [class*="col-"] {
+        flex-basis: 33.33%;
+    }
+}
+
+/* Opdracht: Telefoon - rode rand, alle kolommen 100% breed */
+@media (max-width: 576px) {
+    .container {
+        border: 5px solid red;
+    }
+
+    .row [class*="col-"] {
+        flex-basis: 100%;
+    }
+}
