@@ -1,0 +1,149 @@
+/* ===== GRID SYSTEEM ===== */
+
+/* Container */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+    border: 3px solid cyan;
+}
+
+/* Row */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 4px;
+}
+
+/* Kolommen: flex-grow 0, flex-basis (100 / 12) * aantalKolommen */
+.col-1 {
+    flex-grow: 0;
+    flex-basis: 8.33%;
+}
+
+.col-2 {
+    flex-grow: 0;
+    flex-basis: 16.66%;
+}
+
+.col-3 {
+    flex-grow: 0;
+    flex-basis: 25%;
+}
+
+.col-4 {
+    flex-grow: 0;
+    flex-basis: 33.33%;
+}
+
+.col-5 {
+    flex-grow: 0;
+    flex-basis: 41.66%;
+}
+
+.col-6 {
+    flex-grow: 0;
+    flex-basis: 50%;
+}
+
+.col-7 {
+    flex-grow: 0;
+    flex-basis: 58.33%;
+}
+
+.col-8 {
+    flex-grow: 0;
+    flex-basis: 66.66%;
+}
+
+.col-9 {
+    flex-grow: 0;
+    flex-basis: 75%;
+}
+
+.col-10 {
+    flex-grow: 0;
+    flex-basis: 83.33%;
+}
+
+.col-11 {
+    flex-grow: 0;
+    flex-basis: 91.66%;
+}
+
+.col-12 {
+    flex-grow: 0;
+    flex-basis: 100%;
+}
+
+/* ===== BASIS STYLING ===== */
+[class*="col-"] {
+    border: 1px solid cyan;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    background-color: #fff;
+}
+
+/* Header centerering */
+.row:first-child [class*="col-"] {
+    display: flex;
+    align-items: center;
+}
+
+/* Sidebar */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    min-height: 400px;
+}
+
+.sidebar a {
+    color: blue;
+    text-decoration: underline;
+    margin-bottom: 5px;
+}
+
+/* Main content */
+.main {
+    min-height: 400px;
+}
+
+.main h2 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.main p {
+    font-size: 14px;
+    line-height: 1.4;
+    text-align: justify;
+}
+
+.main hr {
+    margin: 15px 0;
+    border: none;
+    border-top: 1px solid #ccc;
+}
+
+/* ===== MEDIA QUERIES (extra) ===== */
+
+/* Tablet: sidebar boven main */
+@media (max-width: 768px) {
+    .row .col-3,
+    .row .col-9,
+    .row .col-6 {
+        flex-basis: 100%;
+    }
+
+    .sidebar {
+        flex-direction: row;
+        min-height: auto;
+        gap: 15px;
+    }
+
+    .main {
+        min-height: auto;
+    }
+}
